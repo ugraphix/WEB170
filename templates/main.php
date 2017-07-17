@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 
@@ -31,13 +30,13 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
 
 <head>
-<title>Urban Graphix Designs</title>
+<title>Main</title>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta name="description" content="The web design portfolio of Grace Eder">
 <meta name="keywords" content="grace eder, grace, web, website, websites, web design, design, graphic design, logo design, freelance, responsive, mobile, mobile design, development, responsive development, web development, unique, fun, developer, typography, hand drawn, lettering, illustration, affordable, small business, personal, blog, portfolio, store, prints, font, icons, skewed icons, stacked font">
 
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
 
 
 </head>
@@ -56,18 +55,15 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 2;
 var navbarHeight = $('header').outerHeight();
-
 $(window).scroll(function(event){
     didScroll = true;
 });
-
 setInterval(function() {
     if (didScroll) {
         hasScrolled();
         didScroll = false;
     }
 }, 250);
-
 function hasScrolled() {
     var st = $(this).scrollTop();
     
@@ -257,7 +253,6 @@ var lastId,
       var item = $($(this).attr("href"));
       if (item.length) { return item; }
     });
-
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
@@ -268,7 +263,6 @@ menuItems.click(function(e){
   }, 900);
   e.preventDefault();
 });
-
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
@@ -306,4 +300,3 @@ $(window).scroll(function(){
     
 </body>
 </html>
-
