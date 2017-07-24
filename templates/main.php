@@ -95,19 +95,19 @@ function hasScrolled() {
 	<div class="navbar1">
     	<ul id="top-menu">
             <li class="">
-    			<a href="home.php">Home</a>
+    			<a href="home">HOME</a>
   			</li>
   			<li class="">
-    			<a href="#about">ABOUT</a>
+    			<a href="about">ABOUT</a>
   			</li>
   			<li class="">
-    			<a href="#work">WORK</a>
+    			<a href="portfolio">WORK</a>
   			</li>
   			<li class="">
-    			<a href="#contact">CONTACT</a>
+    			<a href="contact">CONTACT</a>
   			</li>
             <li class="">
-    			<a href="staging.php">STAGING AREA</a>
+    			<a href="staging">STAGING AREA</a>
   			</li>
 		</ul>
 	</div>
@@ -143,11 +143,7 @@ function hasScrolled() {
 
 
 <section>
-<a name="about">
-</a>
-<div class="about">
-<h3>About</h3>
-</div>
+
 
     
 <a name="work">
@@ -239,7 +235,7 @@ function hasScrolled() {
 
 
 
-<script type="text/javascript" src="js/javascript.js"> </script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?> /js/javascript.js"> </script>
   
 <script>
 // Cache selectors

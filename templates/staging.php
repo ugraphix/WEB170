@@ -31,21 +31,20 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
 
 <head>
-<title><?php bloginfo('description'); ?> | <?php bloginfo ('name'); ?></title>
+<title>Staging Area</title>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta name="description" content="The web design portfolio of Grace Eder">
 <meta name="keywords" content="grace eder, grace, web, website, websites, web design, design, graphic design, logo design, freelance, responsive, mobile, mobile design, development, responsive development, web development, unique, fun, developer, typography, hand drawn, lettering, illustration, affordable, small business, personal, blog, portfolio, store, prints, font, icons, skewed icons, stacked font">
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
-<!-- begin wp head content-->
-<?php wp_head(); ?>
-<!--end wp head content-->
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+
 </head>
 
 
 
-<body <?php body_class(); ?>>
+<body>
 
 
 
@@ -94,36 +93,25 @@ function hasScrolled() {
     
     
 </script> 
-    
-<!--begin main menu-->
-<header class="nav-down">
-	<div class="navWrapper">
-        <?php wp_nav_menu(array('theme_location' => 'main-menu', 'container' => 'div', 'container_id' => 'navbar1', 'items_wrap' => '<ul id="top-menu" class="%2$s"><%3$s</ul>',)); ?> 
-    </div> 
-   </header>
-    
-<!--end main menu-->
 
-<!--begin old navigation-->
-    
-    <!--<header class="nav-down">
+<header class="nav-down">
 	<div class="navWrapper">
 	<div class="navbar1">
     	<ul id="top-menu">
             <li class="">
-    			<a href="home">HOME</a>
+    			<a href="home.php">Home</a>
   			</li>
   			<li class="">
-    			<a href="about">ABOUT</a>
+    			<a href="main.php#about">ABOUT</a>
   			</li>
   			<li class="">
-    			<a href="portfolio">WORK</a>
+    			<a href="main.php#work">WORK</a>
   			</li>
   			<li class="">
-    			<a href="contact">CONTACT</a>
+    			<a href="main.php#contact">CONTACT</a>
   			</li>
             <li class="">
-    			<a href="staging">STAGING AREA</a>
+    			<a href="staging.php">STAGING AREA</a>
   			</li>
 		</ul>
 	</div>
@@ -132,11 +120,11 @@ function hasScrolled() {
 			<div class="accordionContent">
                 <a href="home.php">Home</a>
                 <div class="divLine"></div>
-				<a href="#about">ABOUT</a><br>
+				<a href="main.php#about">ABOUT</a><br>
 				<div class="divLine"></div>
-				<a href="#work">WORK</a><br>
+				<a href="main.php#work">WORK</a><br>
 				<div class="divLine"></div>
-				<a href="#contact">CONTACT</a><br>
+				<a href="main.php#contact">CONTACT</a><br>
                 <div class="divLine"></div>
 				<a href="staging.php">STAGING AREA</a><br>
 		</div>
@@ -148,35 +136,35 @@ function hasScrolled() {
            
        </div>
   </div>
-</header>-->
-<!--begin old navigation-->
+</header>
 
 
-<div id="main">
-    <h2>Main Section</h2>
-    <?php if (have_posts()): while (have_posts()): the_post(); ?>
-            
-            
-    <?php the_content(''); ?>
-    <?php endwhile; endif; ?>
-</div>
-<div id="aside">
-<h2>This is the aside</h2>    
-  
+   
+
+
+
+<div class="staging">
+<h2>Staging Area</h2>
+    <h3>Templates</h3>
+    <ul>
+    <li><a href="main.php">Main Page</a></li>
+    <li><a href="home.php">Home Page</a></li>
+    </ul>
     
-    </div>
+    
+    <h3>Repositories</h3>
+    <ul>
+        <li><a href="https://github.com/ugraphix/WEB170">Github</a></li>
+    </ul>
+    
+    <h3>Protosite</h3>
+    <ul>
+        <li><a href="http://www.graciebikes.com/web170/wordpress/">Animals Pooping</a></li>
+    </ul>
+</div>
 
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?> /js/javascript.js"> </script>
-
+    
+    <script type="text/javascript" src="js/javascript.js"> </script>
   
 <script>
 // Cache selectors
@@ -225,6 +213,8 @@ $(window).scroll(function(){
    }                   
 });
 </script>
+    
+
 
 
 
@@ -233,12 +223,12 @@ $(window).scroll(function(){
 <li>Copyright &copy; 2015,</li>
 <li>All Rights Reserved</li>
     <li><a href="mailto:grace@ugraphix.com">Web Design: Grace Eder</a></li></ul>
+
+
+
+
+
 </div><!--end footer-->
-    
-    
- <?php wp_footer(); ?>
-<!--end wp head content-->
-</head>   
 </body>
 </html>
 
