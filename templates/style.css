@@ -127,7 +127,7 @@ input {
 	font-family: 'Raleway', sans-serif;
 	color:#000000;
 	font-weight:500;
-	background-image:url(../images/form_bkg.png);
+	background-image:url(images/form_bkg.png);
 }
 input[type=submit] {
 	background-image:none;
@@ -144,7 +144,7 @@ textarea {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	font-family: 'Raleway', sans-serif;
-	background-image:url(../images/form_bkg.png);
+	background-image:url(images/form_bkg.png);
 }
 .success {
 	font-size:18px;
@@ -427,7 +427,7 @@ header {
 .twitterIcon {
 	width:6%;
 	max-width:40px;
-	background-image:url(../images/twitter.png);
+	background-image:url(images/twitter.png);
 	height:19px;
 	float:right;
 	margin:25px 0px 0px 0px;
@@ -436,13 +436,13 @@ header {
 	background-size:23px 19px;
 }
 .twitterIcon:hover {
-	background-image:url(../images/twitter_rollover.png);
+	background-image:url(images/twitter_rollover.png);
 	cursor:pointer;
 }
 .googleplusIcon {
 	width:6%;
 	max-width:40px;
-	background-image:url(../images/googleplus.png);
+	background-image:url(images/googleplus.png);
 	height:19px;
 	float:right;
 	margin:25px 0px 0px 0px;
@@ -451,7 +451,7 @@ header {
 	background-size:21px 19px;
 }
 .googleplusIcon:hover {
-	background-image:url(../images/googleplus_rollover.png);
+	background-image:url(images/googleplus_rollover.png);
 	cursor:pointer;
 }
 
@@ -459,7 +459,7 @@ header {
 .emailIcon {
 	width:6%;
 	max-width:40px;
-	background-image:url(../images/instagram.png);
+	background-image:url(images/instagram.png);
 	height:20px;
 	float:right;
 	margin:25px 0px 0px 0px;
@@ -468,7 +468,7 @@ header {
 	background-size:20px 20px;
 }
 .emailIcon:hover {
-	background-image:url(../images/instagram_rollover.png);
+	background-image:url(images/instagram_rollover.png);
 	cursor:pointer;
 }
 
@@ -898,7 +898,7 @@ header {
 .twitterIcon {
 	width:10%;
 	max-width:40px;
-	background-image:url(../images/twitter.png);
+	background-image:url(images/twitter.png);
 	height:17px;
 	float:right;
 	margin:17px 0px 0px 0px;
@@ -909,7 +909,7 @@ header {
 .googleplusIcon {
 	width:10%;
 	max-width:40px;
-	background-image:url(../images/googleplus.png);
+	background-image:url(images/googleplus.png);
 	height:17px;
 	float:right;
 	margin:17px 0px 0px 0px;
