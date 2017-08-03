@@ -222,7 +222,7 @@ textarea {
 .home {
    
     background-color: #e1e4b3;
-    height:500px;
+    
     padding-top:8%;
   
     font-family: 'Raleway', sans-serif;
@@ -251,7 +251,7 @@ textarea {
 #main {
    
     background-color: #e1e4b3;
-    height:500px;
+    
     
     margin:10% 0 100px 5%;
   
@@ -288,7 +288,7 @@ textarea {
 #aside {
    
     background-color: #e1e4b3;
-    height:500px;
+    height:300px;
    
     float: right;
   

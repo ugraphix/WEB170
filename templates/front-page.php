@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 
@@ -31,21 +30,20 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
 
 <head>
-<title><?php bloginfo('description'); ?> | <?php bloginfo ('name'); ?></title>
+<title>Main</title>
 
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta name="description" content="The web design portfolio of Grace Eder">
 <meta name="keywords" content="grace eder, grace, web, website, websites, web design, design, graphic design, logo design, freelance, responsive, mobile, mobile design, development, responsive development, web development, unique, fun, developer, typography, hand drawn, lettering, illustration, affordable, small business, personal, blog, portfolio, store, prints, font, icons, skewed icons, stacked font">
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
-<!-- begin wp head content-->
-<?php wp_head(); ?>
-<!--end wp head content-->
+
+
 </head>
 
 
 
-<body <?php body_class(); ?>>
+<body>
 
 
 
@@ -57,18 +55,15 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 2;
 var navbarHeight = $('header').outerHeight();
-
 $(window).scroll(function(event){
     didScroll = true;
 });
-
 setInterval(function() {
     if (didScroll) {
         hasScrolled();
         didScroll = false;
     }
 }, 250);
-
 function hasScrolled() {
     var st = $(this).scrollTop();
     
@@ -94,19 +89,8 @@ function hasScrolled() {
     
     
 </script> 
-    
-<!--begin main menu-->
-<header class="nav-down">
-	<div class="navWrapper">
-        <?php wp_nav_menu(array('theme_location' => 'main-menu', 'container' => 'div', 'container_id' => 'navbar1', 'items_wrap' => '<ul id="top-menu" class="%2$s">%3$s</ul>',)); ?> 
-    </div> 
-   </header>
-    
-<!--end main menu-->
 
-<!--begin old navigation-->
-    
-    <!--<header class="nav-down">
+<header class="nav-down">
 	<div class="navWrapper">
 	<div class="navbar1">
     	<ul id="top-menu">
@@ -148,48 +132,110 @@ function hasScrolled() {
            
        </div>
   </div>
-</header>-->
-<!--begin old navigation-->
+</header>
 
 
-<div id="main">
+
+
+
+
+
+
+
+<section>
+
+
     
-    <?php if (have_posts()): while (have_posts()): the_post(); ?>
-        <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>    
-            
-    <?php the_content(''); ?>
-    
-    
-    
-    
-    <?php endwhile; endif; ?>
-</div>
-<div id="aside">
-<h2>This is the aside</h2> 
-   
-<ul>
-    <?php
-    global $id;
-   wp_list_pages(array('sort_column' => 'post_date', 'sort_order' => 'desc'));
-    ?>
-</ul>    
-    
-    
-  
-    
+<a name="work">
+</a>   
+<div class="portfolio">
+    <h3> Work</h3> 
+    <div class ="yellowBox">
+        <div class="grow">
+            <img src="images/portfolio1.png">
+        </div>
+        <br>
+        CONTENT 1
+        <br>
+        <div class="boxesInfo" style="color:#d76713">Content 1</div>
+    </div>   
+    <div class ="greenBox">
+        <div class="grow">
+            <img src="images/portfolio2.png">
+        </div>
+        <br>
+        CONTENT 2
+        <br>
+        <div class="boxesInfo" style="color:#535C4F">Content 2</div>
+    </div>  
+    <div class ="orangeBox">
+        <div class="grow">
+            <img src="images/portfolio3.png">
+        </div>
+        <br>
+        CONTENT 3
+        <br>
+        <div class="boxesInfo" style="color:#fbd474">Content 3</div>
     </div>
+     <div class ="dkOrangeBox">
+        <div class="grow">
+            <img src="images/portfolio4.png">
+        </div>
+         <br>
+        CONTENT 4
+        <br>
+        <div class="boxesInfo" style="color:#e28100">Content 4</div>
+    </div>
+    <div class ="orangeBox">
+        <div class="grow">
+            <img src="images/portfolio5.png">
+        </div>
+        <br>
+        CONTENT 5
+        <br>
+        <div class="boxesInfo" style="color:#fbd474">Content 5</div>
+    </div>
+     <div class ="dkGreenBox">
+        <div class="grow">
+            <img src="images/portfolio6.png">
+        </div>
+        <br>
+        CONTENT 6
+        <br>
+        <div class="boxesInfo" style="color:#e6e8bf">Content 6</div>
+    </div>  
+    <div class ="yellowBox">
+        <div class="grow">
+            <img src="images/portfolio7.png">
+        </div>
+        <br>
+        CONTENT 7
+        <br>
+        <div class="boxesInfo" style="color:#d76713">Content 7</div>
+    </div>
+    <div class ="greenBox">
+        <div class="grow">
+            <img src="images/portfolio8.png">
+        </div>
+        <br>
+        CONTENT 8
+        <br>
+        <div class="boxesInfo" style="color:#535C4F">Content 8</div>
+    </div>  
+    
+</div>    
 
+<a name="contact">
+</a>
+<div class="contact">
+<h3>Contact</h3>
+</div>
 
-
-
-
-
-
+</section>
 
 
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?> /js/javascript.js"> </script>
-
   
 <script>
 // Cache selectors
@@ -203,7 +249,6 @@ var lastId,
       var item = $($(this).attr("href"));
       if (item.length) { return item; }
     });
-
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
@@ -214,7 +259,6 @@ menuItems.click(function(e){
   }, 900);
   e.preventDefault();
 });
-
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
@@ -249,9 +293,6 @@ $(window).scroll(function(){
 </div><!--end footer-->
     
     
- <?php wp_footer(); ?>
-<!--end wp head content-->
-</head>   
+    
 </body>
 </html>
-
