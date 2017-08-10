@@ -61,8 +61,15 @@ controlsContainer: ".flex-container" // the container that holds the flexslider
         
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    <h2><a href="<?php the_title(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-    <?php the_excerpt(); ?>
+    <article class="post-excerpt">
+        <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>    
+		<small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>
+</small>
+	   <?php the_post_thumbnail( 'thumbnail' ); ?>
+
+        <?php the_excerpt(''); ?>
+            <p class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></p>
+        </article>
 
   <?php endwhile; ?>
   <?php wp_reset_postdata(); ?>
@@ -74,7 +81,7 @@ controlsContainer: ".flex-container" // the container that holds the flexslider
         
 
 		
-        <small>single.php</small>
+        <small>front-page.php</small>
 		
 	</div>
     

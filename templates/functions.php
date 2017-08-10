@@ -15,6 +15,15 @@ General comments: I hope this works.
 */
 
 //register menus
-register_nav_menus(array('main-menu' => 'Main Menu'))
+register_nav_menus(array('main-menu' => 'Main Menu'));
 //
+
+    
+//Create Post Thumbnails
+add_theme_support( 'post-thumbnails' );
+
+//Create Page Excerpts
+add_post_type_support('page', 'excerpt');
+    
+    
 ?>

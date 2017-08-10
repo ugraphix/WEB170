@@ -8,21 +8,22 @@
 
 	<div id="main">
 		<?php if (have_posts()): while (have_posts()): the_post(); ?>
-			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>    
-			<?php the_content(''); ?>
+			
+        <article class="post-excerpt">
+        <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>    
+		<small>Posted on <?php the_time('F j, Y'); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>
+</small>
+	   <?php the_post_thumbnail( 'thumbnail' ); ?>
+
+        <?php the_excerpt(''); ?>
+            <p class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></p>
+        </article>
 		<?php endwhile; endif; ?>
         
         
         
         
-        <script>$my_query = new WP_Query( 'cat=3' );
-if ( $my_query->have_posts() ) { 
-	while ( $my_query->have_posts() ) { 
-		$my_query->the_post();
-		the_content();
-	}
-}
-wp_reset_postdata();</script>
+   
         
         
 		
