@@ -5,7 +5,7 @@
 <!--end main menu-->
 
 
-
+<!---this is the start of the loop for posts---->
 	<div id="main">
 		<?php if (have_posts()): while (have_posts()): the_post(); ?>
 			
@@ -19,6 +19,8 @@
             <p class="read-more"><a href="<?php the_permalink(); ?>">Read More</a></p>
         </article>
 		<?php endwhile; endif; ?>
+
+<!---this is the end of loop for posts---->
         
         
         
